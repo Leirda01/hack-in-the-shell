@@ -1,0 +1,3 @@
+= hack in the shell
+
+https://tribe.adatechschool.fr/t/12eme-sequence-boulder-dash/373/5[l’exo de base]
