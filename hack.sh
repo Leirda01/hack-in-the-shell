@@ -8,9 +8,7 @@ function UUUUUPPER { treasy $1 [:lower:] [:upper:]; }
 function inversion { treasy $1 [:lower:][:upper:] [:upper:][:lower:]; }
 
 function LoWeRUpPeR {
-  looooower $1
-  UUUUUPPER $1
-  inversion $1
+  looooower $1; UUUUUPPER $1; inversion $1;
   UUUUUPPER $1 | sed -r 's/(.)(.)/\l\1\2/g' # BaSh…
   UUUUUPPER $1 | sed -r 's/(.)(.)/\1\l\2/g' # bAsH…
   looooower $1 | sed -r 's/./\u&/' # Bash…
@@ -30,7 +28,7 @@ function express {
 }
 
 for pass in $(cat $1); do
-  try $pass
+  try $pass;
   LoWeRUpPeR $pass;
   l33t $pass;
   express $pass;
